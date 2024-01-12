@@ -11,6 +11,9 @@ apps(name = "app1", ...)
 
 \item{...}{arguments to pass to \code{shiny::runApp()} or to \code{rmarkdown::run()}}
 }
+\value{
+Shiny app
+}
 \description{
 Launch some Shiny apps
 }

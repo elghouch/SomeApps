@@ -6,7 +6,6 @@ runtime: shiny
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
-options(shiny.launch.browser = .rs.invokeShinyWindowExternal)
 ```
 
 ```{r data}

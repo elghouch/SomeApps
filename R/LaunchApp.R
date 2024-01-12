@@ -3,6 +3,8 @@
 #' @param name The name of the app to run
 #' @param ... arguments to pass to `shiny::runApp()` or to `rmarkdown::run()`
 #'
+#' @return Shiny app
+#'
 #' @section Examples:
 #'
 #' ```{r eval = FALSE}
