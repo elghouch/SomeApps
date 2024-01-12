@@ -19,7 +19,7 @@ Launch some Shiny apps
 
 \if{html}{\out{<div class="sourceCode r">}}\preformatted{apps()
 apps("app1")
-apps("app2)
+apps("app2")
 }\if{html}{\out{</div>}}
 }
 

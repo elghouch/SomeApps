@@ -8,7 +8,7 @@
 #' ```{r eval = FALSE}
 #' apps()
 #' apps("app1")
-#' apps("app2)
+#' apps("app2")
 #' ```
 #'
 #' @export
