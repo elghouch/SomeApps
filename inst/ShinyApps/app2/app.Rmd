@@ -1,0 +1,36 @@
+---
+output: html_document
+title: My first Shiny Rmd doc
+runtime: shiny
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+options(shiny.launch.browser = .rs.invokeShinyWindowExternal)
+```
+
+```{r data}
+var <- faithful$waiting
+```
+
+```{r histogram function}
+histogram <- function(nbars = 3, x = var) hist(x, breaks = seq(min(x), max(x), length.out = nbars + 1))
+```
+
+## {.tabset}
+
+### Static histogram
+
+```{r staticPlot, fig.width=12}
+histogram()
+```
+
+### Intercative histogram
+
+```{r input slider}
+sliderInput(inputId = "bins", label = "Number of bins:", min = 1, max = 50, value = 30)
+```
+
+```{r output reactivePlot}
+renderPlot(histogram(input$bins))
+```
