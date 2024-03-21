@@ -16,7 +16,7 @@
 #' @export
 #'
 apps <- function(name = "app1", ...) {
-  appDir <- system.file("ShinyApps", name, package = "pkgnam2")
+  appDir <- system.file("ShinyApps", name, package = getNamespaceName(parent.env(environment())))
   if ("app.R" %in% list.files(appDir)) {
     shiny::runApp(appDir, launch.browser = TRUE, ...)
   } else if ("app.Rmd" %in% list.files(appDir)) {
