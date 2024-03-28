@@ -15,6 +15,9 @@
 #'
 #' @export
 #'
+#' @import shiny
+#' @import rmarkdown
+#'
 apps <- function(name = "app1", ...) {
   appDir <- system.file("ShinyApps", name, package = getNamespaceName(parent.env(environment())))
   if ("app.R" %in% list.files(appDir)) {
